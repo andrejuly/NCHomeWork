@@ -34,15 +34,15 @@ public class Employee {
     }
 
     public String getName() {
-        return this.firstName + " " + this.lastName;
+        return firstName + " " + lastName;
     }
 
     public int getAnnualSalary() {
-        return this.salary * 12;
+        return salary * 12;
     }
 
     public int raiseSalary(int percent) {
-        int finalSalary = this.salary + this.salary * percent / 100;
+        int finalSalary = salary + salary * percent / 100;
         return finalSalary;
     }
 
