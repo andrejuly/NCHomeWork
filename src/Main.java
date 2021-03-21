@@ -1,5 +1,7 @@
 import com.ulyanovcompany.task21.MyComplex;
 import com.ulyanovcompany.task22.MyPolynomial;
+import com.ulyanovcompany.task23.Ball;
+import com.ulyanovcompany.task23.Container;
 import com.ulyanovcompany.task3.Employee;
 import com.ulyanovcompany.task4.Author;
 import com.ulyanovcompany.task4.Book;
@@ -50,6 +52,12 @@ public class Main {
 //
 //        System.out.println(myPolynomial.multiply(myPolynomial1));
 //        System.out.println(myPolynomial.add(myPolynomial1));
+
+        Container container = new Container(1,1,3,3);
+        Ball ball = new Ball(2,0,1,2,2);
+        System.out.println(container);
+        boolean flag = container.collides(ball);
+        System.out.println(flag);
 
 
 
