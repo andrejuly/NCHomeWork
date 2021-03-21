@@ -1,4 +1,4 @@
-package com.ulyanovcompany.task1;
+package com.ulyanovcompany.task2;
 
 public class Rectangle {
     private float length = 1.0f;

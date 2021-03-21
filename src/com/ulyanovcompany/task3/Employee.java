@@ -1,4 +1,4 @@
-package com.ulyanovcompany.task1;
+package com.ulyanovcompany.task3;
 
 public class Employee {
     private int id;
