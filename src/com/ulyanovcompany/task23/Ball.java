@@ -12,7 +12,7 @@ public class Ball {
         this.y = y;
         this.radius = radius;
         this.xDelta = (float) (speed * Math.cos(Math.toRadians((direction))));
-        this.yDelta = yDelta;
+        this.yDelta = (float) (-speed * Math.sin(Math.toRadians((direction))));
     }
 
     public float getX() {
@@ -59,7 +59,7 @@ public class Ball {
         x += xDelta;
         y += yDelta;
     }
-    
+
     public void reflectHorizontal() {
         xDelta = -xDelta;
     }
@@ -67,6 +67,5 @@ public class Ball {
     public void reflectVertical() {
         yDelta = -yDelta;
     }
-
 
 }

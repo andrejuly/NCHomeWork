@@ -53,12 +53,32 @@ public class Main {
 //        System.out.println(myPolynomial.multiply(myPolynomial1));
 //        System.out.println(myPolynomial.add(myPolynomial1));
 
-        Container container = new Container(1,1,3,3);
-        Ball ball = new Ball(2,0,1,2,2);
+        Container container = new Container(1, -10, 20, 20);
+        Ball ball = new Ball(4, -20, 3, 2, 30);
+        boolean flag = true;
         System.out.println(container);
-        boolean flag = container.collides(ball);
-        System.out.println(flag);
-
+//        while (flag == true) {
+//            System.out.println(ball.getX() + "," + ball.getY());
+//            ball.move();
+//            flag = container.collides(ball);
+//        }
+        ball.move();
+        System.out.println(ball.getX() + "," + ball.getY());
+        ball.reflectVertical();
+        ball.move();
+        ball.reflectHorizontal();
+        ball.move();
+        ball.move();
+        System.out.println(ball.getX() + "," + ball.getY());
+        ball.move();
+        System.out.println(ball.getX() + "," + ball.getY());
+        ball.move();
+        System.out.println(ball.getX() + "," + ball.getY());
+        ball.reflectVertical();
+        System.out.println(ball.getX() + "," + ball.getY());
+        ball.move();
+        ball.move();
+        System.out.println(ball.getX() + "," + ball.getY());
 
 
     }

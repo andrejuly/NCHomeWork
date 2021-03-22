@@ -30,10 +30,10 @@ public class Container {
     }
 
     public boolean collides(Ball ball) {
-        float xKoordBall = ball.getX()+ball.getxDelta()+ball.getRadius();
-        float yKoordBall = ball.getY()+ball.getyDelta()+ball.getRadius();
+        float xKoordBall = ball.getX() + ball.getRadius();
+        float yKoordBall = ball.getY() + ball.getRadius();
         if ((xKoordBall - x1) * (xKoordBall - x2) <= 0 && (yKoordBall - y1) * (yKoordBall - y2) <= 0)
-        return true;
+            return true;
         else return false;
     }
 
