@@ -35,7 +35,7 @@ public class MyPolynomial {
         double[] newCoeff = new double[newSize + 1];
         for (int i = 0; i <= this.getDegree(); i++) {
             for (int j = 0; j <= right.getDegree(); j++) {
-                newCoeff[i + j] = this.coeffs[i] * this.coeffs[j];
+                newCoeff[i + j] = this.coeffs[i] * right.coeffs[j];
             }
         }
         return new MyPolynomial(newCoeff);
