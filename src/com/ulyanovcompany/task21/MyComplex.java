@@ -5,6 +5,8 @@ import java.util.Objects;
 public class MyComplex {
     private double real = 0.0;
     private double imag = 0.0;
+    
+    private static final double EPS = 1e-12;
 
     public MyComplex() {
     }
@@ -42,13 +44,19 @@ public class MyComplex {
                 "+" + imag +
                 "i)";
     }
-
+    
     public boolean isReal() {
-        return Math.abs(imag) == 0;
+        return real < EPS;
     }
 
     public boolean isImaginary() {
-        return !isReal();
+        return imag < EPS;
+    }
+
+    public boolean equals(double re, double im) {
+        boolean b0 = this.real - re < EPS;
+        boolean b1 = this.imag - im < EPS;
+        return b0 && b1;
     }
 
 //    @Override
@@ -60,14 +68,10 @@ public class MyComplex {
 //                Double.compare(myComplex.imag, imag) == 0;
 //    }
 
-    public boolean equals(double real, double imag) {
-        if (this.real == real && this.imag == imag) return true;
-        else return false;
-    }
+
 
     public boolean equals(MyComplex another) {
-        if (this.real == another.real && this.imag == another.imag) return true;
-        else return false;
+        return equals(another.real, another.imag);
     }
 
     public double magnitude() {
